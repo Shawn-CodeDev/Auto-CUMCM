@@ -1,0 +1,12 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+
+# Local tools and operating-system files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs and temporary outputs
+*.log
+*.tmp
