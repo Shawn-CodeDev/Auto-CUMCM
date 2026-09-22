@@ -1,0 +1,66 @@
+==============================================================================
+国赛提交包 · allowlist 打包与身份信息扫描报告
+生成时间：2026-09-20 12:23:32
+工作目录：E:\Math-SOP
+==============================================================================
+
+【4】自检：植入已知字符串，验证扫描器真的在工作
+  目的：干净树的'0 命中'与'扫描器根本没运行'输出完全一样。
+  做法：把已知串放进**真实格式**（docx 的 XML run、xlsx 单元格、ipynb 输出单元格、
+        无扩展名文件、纯文本），再看扫描器是否抓到；同时放两个干净文件查误报。
+
+  植入的已知字符串（应为每条都能被抓到）：
+    [命中] 中文校名（docx 正文 XML，且被切分成两个 run）
+            植入：南京某某大学
+            位置：seeds/论文摘要.docx
+            抓到：《中文校名（XX大学）》 @ seeds/论文摘要.docx :: word/document.xml
+            证据：本文由南京某某大学
+    [命中] 学号（xlsx 单元格）
+            植入：2026123456
+            位置：seeds/数据台账.xlsx
+            抓到：《学号》 @ seeds/数据台账.xlsx :: xl/worksheets/sheet1.xml
+            证据：学号2026123456
+    [命中] POSIX 家目录路径（ipynb 输出单元格）
+            植入：/home/zhangsan/project
+            位置：seeds/建模过程.ipynb
+            抓到：《POSIX 家目录路径》 @ seeds/建模过程.ipynb
+            证据：/home/zhangsan
+    [命中] Windows 用户名路径（无扩展名文件）
+            植入：C:\Users\zhangsan\Desktop
+            位置：seeds/说明文件
+            抓到：《Windows 绝对路径（含用户名）》 @ seeds/说明文件
+            证据：C:\Users\zhangsan
+    [命中] 邮箱（纯文本）
+            植入：zhangsan@nju.edu.cn
+            位置：seeds/requirements.txt
+            抓到：《邮箱地址》 @ seeds/requirements.txt
+            证据：zhangsan@nju.edu.cn
+    [命中] 赛区名（验证白名单没有把真赛区一起放行）
+            植入：江苏赛区
+            位置：seeds/说明文件
+            抓到：《赛区编号或赛区名》 @ seeds/说明文件
+            证据：江苏赛区
+  干净对照（应为 0 命中，否则是误报）：
+    [干净] seeds/clean_notes.md
+    [干净] seeds/clean.ipynb
+  白名单上下文对照（规则原文与模板占位里的「大学/学院」不应算泄露）：
+    [已放行] seeds/clean_rules.md
+  垃圾文件侦测（包内出现即缺陷）：
+    [抓到] model.py~
+            seeds/model.py~  ← 备份/缓存/日志文件不应出现在提交包里
+    [抓到] __pycache__
+            seeds/__pycache__/model.cpython-311.pyc  ← 目录 __pycache__/ 不应出现在提交包里
+            seeds/__pycache__/model.cpython-311.pyc  ← 备份/缓存/日志文件不应出现在提交包里
+  自检扫描统计：文件 10 个，命中 9 条，垃圾项 3 条，未扫描 2 条
+  自检临时树已清理。
+
+  自检结论：通过（扫描器确实在工作）
+
+【5】本报告的分工
+  本脚本负责：包内容 = allowlist 的显式列表；staged tree 的字节级身份信息扫描；
+             扫描器有效性自检。
+  本脚本不负责：论文正文与 PDF 元数据（用 validate_pipeline.py --stage P14）、
+             提交包文件名与体积上限（--stage P16）、
+             附录代码能否跑通（必须解压到干净目录实跑一遍）。
+
+结论：未发现阻断项（人工复核仍不可省略）

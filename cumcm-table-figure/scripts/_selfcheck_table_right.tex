@@ -1,0 +1,21 @@
+% 由 skills/cumcm-table-figure/scripts/table_gen.py 生成
+% 重新生成：修改数据源或 spec 后重跑脚本；请勿手改数字。
+\begin{table}[htbp]
+  \centering
+  \caption{三枚干扰弹的最优投放方案明细（示意性数据，自检用）}
+  \label{tab:selfcheck}
+  \small
+  \begin{tabular}{@{}l r r r r@{}}
+    \toprule
+    弹序 & \multicolumn{1}{c}{投放时刻 $t_{1,i}$ (s)} & \multicolumn{1}{c}{起爆点 $z$ (m)} & \multicolumn{1}{c}{有效时长 (s)} & \multicolumn{1}{c}{相对提升 (\%)} \\
+    \midrule
+    弹 1 & \textbf{115.62} & 1\,662 & 1.05 & — \\
+    弹 2 & 127.48 & 1\,611 & 2.15 & — \\
+    弹 3 & 139.35 & 1\,558 & 1.12 & — \\
+    合计（并集） & — & — & \textbf{4.62} & \textbf{+149.7} \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{2pt}
+  {\footnotesize 注：合计行为三个遮蔽区间的并集长度，不等于三行之和。加粗为该列最优值。``—'' 表示该指标缺测或不适用。单位：投放时刻 $t_{1,i}$（s）、起爆点 $z$（m）、有效时长（s）、相对提升（\%）。数据来源：E02（合成数据，仅用于自检）。}
+\end{table}

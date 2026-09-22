@@ -1,0 +1,12 @@
+{
+  "beta": 0.06745,
+  "t_dry_center_h": 35.3,
+  "t_dry_mean_h": 29.6,
+  "t_dry_days": 1.471,
+  "radius_rmse_cm": 0.49034,
+  "radius_mape_pct": 38.658,
+  "final_radius_cm": 1.5167,
+  "final_center_C": 0.05022,
+  "T_surface_1800s": 41.3148,
+  "T_center_1800s": 37.8516
+}

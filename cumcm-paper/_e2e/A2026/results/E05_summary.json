@@ -1,0 +1,10 @@
+{
+  "drying_time_h": 27.483,
+  "drying_time_days": 1.145,
+  "radius_rmse_cm": 0.27967,
+  "radius_mape_pct": 2024.656,
+  "final_radius_cm": 1.3322,
+  "final_center_C": 0.0502,
+  "final_mean_C": 0.05017,
+  "nfev_p2": 8481
+}

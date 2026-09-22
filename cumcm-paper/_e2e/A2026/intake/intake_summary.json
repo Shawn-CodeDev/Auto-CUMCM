@@ -1,0 +1,139 @@
+{
+  "problem_file": "A题.pdf",
+  "pages": 4,
+  "text_chars": 3274,
+  "n_tasks": 4,
+  "tasks": [
+    {
+      "no": 1,
+      "title": "某中药材形状大致呈圆柱形，长为25 cm，半径为2 cm。烘干开始时，药材的"
+    },
+    {
+      "no": 2,
+      "title": "烘干过程一般持续2-3 天，预热平衡与恒温干燥阶段的参数有所不同。请建立"
+    },
+    {
+      "no": 3,
+      "title": "按照烘干要求，药材各处的水分浓度应低于0.15 kg/kg，请确定药材烘干所需"
+    },
+    {
+      "no": 4,
+      "title": "在实际烘干过程中，药材会因水分流失发生尺寸变化。请根据附件2，确定药"
+    }
+  ],
+  "deliverables": [
+    {
+      "kind": "table",
+      "id": "表1",
+      "hint": "和表2 的格式分别给出100、300、600、"
+    },
+    {
+      "kind": "table",
+      "id": "表2",
+      "hint": "30 分钟内药材的水分浓度"
+    },
+    {
+      "kind": "table",
+      "id": "表3",
+      "hint": "和表4 的格式分别给出3 h 内每隔0.5 h、到药材中心"
+    },
+    {
+      "kind": "table",
+      "id": "表4",
+      "hint": "3 小时内药材的水分浓度"
+    },
+    {
+      "kind": "table",
+      "id": "表5",
+      "hint": "的格式给出每隔6 h、到药材中心距离每隔0.5 cm"
+    },
+    {
+      "kind": "table",
+      "id": "表6",
+      "hint": "的格式给出每隔6 h、到药材中"
+    },
+    {
+      "kind": "file",
+      "id": "result1.xlsx",
+      "hint": ""
+    },
+    {
+      "kind": "file",
+      "id": "result2.xlsx",
+      "hint": ""
+    },
+    {
+      "kind": "file",
+      "id": "result3.xlsx",
+      "hint": ""
+    },
+    {
+      "kind": "file",
+      "id": "result4.xlsx",
+      "hint": ""
+    },
+    {
+      "kind": "format",
+      "id": "保留四位小数",
+      "hint": ""
+    }
+  ],
+  "params": [
+    "长为 = 25 cm",
+    "半径 = 2 cm",
+    "温度 = 28 °C",
+    "内每隔 = 1 s",
+    "到药材中心距离每隔 = 0.1 cm",
+    "的格式分别给出 = 3 h",
+    "内每隔 = 0.5 h",
+    "每隔 = 1 s",
+    "药材各处的水分浓度应低于 = 0.15 kg/kg",
+    "的格式给出每隔 = 6 h",
+    "到药材中心距离每隔 = 0.5 cm",
+    "药材内部水分浓度每隔 = 60 s",
+    "心距离每隔 = 0.5 cm",
+    "密度 = 820 kg/m3",
+    "热传导系数 = 0.36 W/(m·K)"
+  ],
+  "n_data_files": 24,
+  "data_files": [
+    "A题_附件_附件1.xlsx",
+    "A题_附件_附件2.xlsx",
+    "A题_附件_附件3_result1.xlsx",
+    "A题_附件_附件3_result2.xlsx",
+    "A题_附件_附件3_result3.xlsx",
+    "A题_附件_附件3_result4.xlsx",
+    "C题_附件_附件1.xlsx",
+    "C题_附件_附件2.xlsx",
+    "C题_附件_附件3.xlsx",
+    "C题_附件_附件4.xlsx",
+    "C题_附件_附件5_result1.xlsx",
+    "C题_附件_附件5_result2.xlsx",
+    "C题_附件_附件5_result3.xlsx",
+    "C题_附件_附件5_result4-2.xlsx",
+    "C题_附件_附件5_result4-3.xlsx",
+    "D题_附件_附件1.xlsx",
+    "D题_附件_附件2_result1.xlsx",
+    "D题_附件_附件2_result2.xlsx",
+    "D题_附件_附件2_result3.xlsx",
+    "D题_附件_附件2_result4.xlsx",
+    "E题_附件_附件1.xlsx",
+    "E题_附件_附件2_result2.xlsx",
+    "E题_附件_附件2_result3.xlsx",
+    "E题_附件_附件2_result4.xlsx"
+  ],
+  "template_files": [
+    "A题_附件_附件3_result1.xlsx",
+    "A题_附件_附件3_result2.xlsx",
+    "A题_附件_附件3_result3.xlsx",
+    "A题_附件_附件3_result4.xlsx",
+    "C题_附件_附件5_result1.xlsx",
+    "D题_附件_附件2_result1.xlsx",
+    "D题_附件_附件2_result2.xlsx",
+    "D题_附件_附件2_result3.xlsx",
+    "D题_附件_附件2_result4.xlsx",
+    "E题_附件_附件2_result2.xlsx",
+    "E题_附件_附件2_result3.xlsx",
+    "E题_附件_附件2_result4.xlsx"
+  ]
+}
